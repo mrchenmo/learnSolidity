@@ -1,0 +1,109 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract Feidian",
+						"name": "_addr",
+						"type": "address"
+					}
+				],
+				"name": "callGetX",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "x",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "feidianAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "num",
+						"type": "uint256"
+					}
+				],
+				"name": "callSetX",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "feidianAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "setXTranETH",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/callOtherCon.sol": "CallOtherCon"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/callOtherCon.sol": {
+			"keccak256": "0xc5a63ff9158acc5d874dc438bad34eb88483a5a68bdcc5dfb702bc6125a38ad6",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://740822251d22af8d68d1be0e91ff2fcb6810821802eacd4a051f6165bde27a1d",
+				"dweb:/ipfs/QmXf1yBeJ8J9zP7pg7AggReDWm2HLTyQQZb9Rvijcf5Aib"
+			]
+		},
+		"contracts/feidian.sol": {
+			"keccak256": "0x52f829043710b51f4722676ff4b4272dd72c9979a2af0b848f9d4a79ddf7cbe2",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://eec90462c7e873160f87c74224ba94ba1a0b116bff966691c8fb207a5bf6f33c",
+				"dweb:/ipfs/QmUNxLqrXD3NcBHeP867kVVb3o5kjgcKrquRrSdHseaox6"
+			]
+		}
+	},
+	"version": 1
+}

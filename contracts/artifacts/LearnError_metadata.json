@@ -346,11 +346,11 @@
 			]
 		},
 		"contracts/_LearnEvent.sol": {
-			"keccak256": "0x62eb1d7ec9ad69a182c32911c2ac8843a609fbb71c774646d438beef274433d5",
+			"keccak256": "0xae8c149b931648fbbfd8813233ef59a18e0f58b7a59bd44da683ace817ab75e7",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://3a45e1753c54a55b40905bb50b919236e8c2c2060e2baa3672bfda928c41e49d",
-				"dweb:/ipfs/QmafCSZ3mBPN3V3Zu19HK3QfpNmsxCHGFxJNnXygrjw5iX"
+				"bzz-raw://e5a504a98fc850d5afa4407286236027abe3495c76beb3b11aa49c8e76b2855e",
+				"dweb:/ipfs/Qmdu5bcAdrfXtJC8EyZ4SZFPfeeRV4k5CBh6bvSNV8kuTf"
 			]
 		},
 		"hardhat/console.sol": {
