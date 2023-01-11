@@ -6,6 +6,8 @@ contract Feidian {
     uint256 private _x = 0;
     event LogInEvent(uint256 amount, uint256 gas);
 
+   fallback() external payable{}
+
     //获取当前地址的余额
     function getBalance() public view returns (uint256) {
         return address(this).balance;

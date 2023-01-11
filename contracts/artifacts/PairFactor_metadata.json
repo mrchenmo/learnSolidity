@@ -1,0 +1,106 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "token_B",
+						"type": "address"
+					}
+				],
+				"name": "createPair",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "pairAddr",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "getPair",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"createPair(address,address)": {
+					"notice": "使用两个token的地址创建交易对，将交易对的地址返回"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/pairFactor.sol": "PairFactor"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/pairCon.sol": {
+			"keccak256": "0xf9842e8f8744826b4dd3216e39c9419ae31ed726f2fd51286994f210be6d3a94",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://ed7766b17f8a5c9fecd2aa391c394892216789f3c982c3f8a63f223f4c728ae4",
+				"dweb:/ipfs/QmUXLErE42nBJbCUbtSNnpDDaB2uQsvJwWJKDWWR3yJ9VQ"
+			]
+		},
+		"contracts/pairFactor.sol": {
+			"keccak256": "0x65e8d7212908a558ba8e43db96237b97e9a47de8605f255b2c50aa1778843a60",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://2266c0be9a40cae9e929c2a702d5e9d8ad1166aea16d52d175c6b1bc42ff7e2e",
+				"dweb:/ipfs/QmYoRjZSxvVuaKXgsbr2N78NutU3kod4d1X7LP1TswM6Wj"
+			]
+		}
+	},
+	"version": 1
+}

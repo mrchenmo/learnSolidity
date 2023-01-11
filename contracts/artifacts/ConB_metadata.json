@@ -6,31 +6,44 @@
 	"output": {
 		"abi": [
 			{
-				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
 					},
 					{
-						"indexed": false,
 						"internalType": "uint256",
-						"name": "gas",
+						"name": "_num",
 						"type": "uint256"
 					}
 				],
-				"name": "LogInEvent",
-				"type": "event"
+				"name": "callTargetSet",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "x",
+						"type": "uint256"
+					}
+				],
+				"name": "delegateCallTargetFun",
+				"outputs": [],
 				"stateMutability": "payable",
-				"type": "fallback"
+				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "getBalance",
+				"name": "num",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -43,28 +56,15 @@
 			},
 			{
 				"inputs": [],
-				"name": "getX",
+				"name": "sender",
 				"outputs": [
 					{
-						"internalType": "uint256",
-						"name": "x",
-						"type": "uint256"
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "x",
-						"type": "uint256"
-					}
-				],
-				"name": "setX",
-				"outputs": [],
-				"stateMutability": "payable",
 				"type": "function"
 			}
 		],
@@ -81,7 +81,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/feidian.sol": "Feidian"
+			"contracts/conB.sol": "ConB"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -95,12 +95,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/feidian.sol": {
-			"keccak256": "0x3438f1983e53dbd7feeaa48b45229e9424e3cea2c36fb9d06268406bd815c53f",
+		"contracts/conB.sol": {
+			"keccak256": "0xd7328f79ae2f83490a7a3bf151c8d3c478a30f301deb80ef9e0caf2d0be69e4d",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://c4ff9efa9b04304ccba6fdab910597513793d67fbbc0b1515497ff2531586d07",
-				"dweb:/ipfs/QmWhQLT8XWLwfew2sYVTJFGfXqjNs1nKwCUU8Zn3J8N9gv"
+				"bzz-raw://b21a9489966248240d9e44a9fa69413c3c64f5acb2dd031bef98330fc6eba808",
+				"dweb:/ipfs/Qmci1bP1fLkMH4YAtXDEv2n1nw4dBJQJCsA4QTmSveX2V1"
 			]
 		}
 	},
