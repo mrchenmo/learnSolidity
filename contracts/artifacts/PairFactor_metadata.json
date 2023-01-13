@@ -9,6 +9,54 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenB",
+						"type": "address"
+					}
+				],
+				"name": "calculateAddr",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "predictedAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenB",
+						"type": "address"
+					}
+				],
+				"name": "create2Pair",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "pairAdd",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "_tokenA",
 						"type": "address"
 					},
@@ -63,7 +111,7 @@
 			"kind": "user",
 			"methods": {
 				"createPair(address,address)": {
-					"notice": "使用两个token的地址创建交易对，将交易对的地址返回"
+					"notice": "使用两个token的地址创建交易对，将交易对的地址返回,使用create创建合约"
 				}
 			},
 			"version": 1
@@ -94,11 +142,11 @@
 			]
 		},
 		"contracts/pairFactor.sol": {
-			"keccak256": "0x65e8d7212908a558ba8e43db96237b97e9a47de8605f255b2c50aa1778843a60",
+			"keccak256": "0x3c6d48de856ebb45de8e57b735e56bae13bf1cc151430581165620ed80049505",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://2266c0be9a40cae9e929c2a702d5e9d8ad1166aea16d52d175c6b1bc42ff7e2e",
-				"dweb:/ipfs/QmYoRjZSxvVuaKXgsbr2N78NutU3kod4d1X7LP1TswM6Wj"
+				"bzz-raw://b4e171587556c0b93d4435878ae34aa02ac0df15456ee5c4792c025152caab95",
+				"dweb:/ipfs/QmVL4NEnPXY5z9VwssY7AbKzio6AyYY9LKtLS23zLxxMos"
 			]
 		}
 	},
