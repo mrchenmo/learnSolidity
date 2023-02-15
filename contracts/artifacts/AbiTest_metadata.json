@@ -6,6 +6,63 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "Log",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "_msg",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "callwithSignature",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkMethodId",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "bytes",
@@ -90,6 +147,80 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "hash1",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "word",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "num",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					}
+				],
+				"name": "hash2",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "string1",
+						"type": "string"
+					}
+				],
+				"name": "weak",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -99,7 +230,14 @@
 		},
 		"userdoc": {
 			"kind": "user",
-			"methods": {},
+			"methods": {
+				"hash1()": {
+					"notice": "这个方法不能使用pure修饰的原因是 此方法使用三个了全局变量 pure修饰的方法是不能读取也不能写入的，使用了全局变量是需要读取的"
+				},
+				"hash2(string,uint256,address)": {
+					"notice": "此方法使用pure修饰，是因为使用的参数是方法传进来的，不需要去读取或者写入"
+				}
+			},
 			"version": 1
 		}
 	},
@@ -120,11 +258,11 @@
 	},
 	"sources": {
 		"contracts/abiTest.sol": {
-			"keccak256": "0x32dfa03a09de9313f95f0006d2c00ae3c1ede91108c734d2409645b3d0764509",
+			"keccak256": "0x50917963d95449101c8698faf25ea402896245cffcd532f4b6f1ea3f66bb6e09",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://a242aa694648018912e23bc1289367a29a519d9cbf2dc88a5dae0aa43b614a1c",
-				"dweb:/ipfs/QmU4HbSpo5GMUomHWURGk1rLK3nrgTujh7X3974nb7P9Eq"
+				"bzz-raw://74b49939a4f710ffe7e846b4cc8367e08b19dbb0deb1d03923bb49c4f762b0a9",
+				"dweb:/ipfs/QmXkQwjEpDUXBqG5b5tiyWnNp3XJhYbz2VTVmbWmtVFHcA"
 			]
 		}
 	},
