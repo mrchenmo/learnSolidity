@@ -26,7 +26,7 @@ contract MyERC20Con is IERC20 {
         require(to != address(0), "000000000");
         balanceOf[msg.sender] -= amount;
         balanceOf[to] += amount;
-        emit Transfer(msg.sender, recipient, amount);
+        emit Transfer(msg.sender, to, amount);
         return true;
     }
 
