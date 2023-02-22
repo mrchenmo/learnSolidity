@@ -29,4 +29,35 @@ contract MyERC20Con is IERC20 {
         emit Transfer(msg.sender, recipient, amount);
         return true;
     }
+
+    function approve(address spender, uint256 amount)
+        external
+        override
+        returns (bool)
+    {
+        allowance[msg.sender][spender] = amount;
+        emit Approval(msg.sender, spender, amount);
+        return true;
+    }
+
+    function transferFrom(
+        address from,
+        address to,
+        uint256 amount
+    ) external override returns (bool) {
+        //发送者授权amount个代币的权限用于转账
+        allowance[from][msg.sender] -= amount;
+        //将发送者的代币数量减少amount个
+        balanceOf[from] -= amount;
+        //接收者的代币数量增加amount个
+        balanceOf[to] += amount;
+        emit Transfer(from, to, amount);
+        return true;
+    }
+
+    function mint(uint256 amount) external {
+        balanceOf[msg.sender] += amount;
+        totalSupply += amount;
+        emit Transfer(address(0), msg.sender, amount);
+    }
 }
