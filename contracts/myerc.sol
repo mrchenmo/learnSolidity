@@ -4,8 +4,12 @@ pragma solidity >=0.7.0 <0.9.0;
 import "./IERC20.sol";
 
 contract MyERC20Con is IERC20 {
+    //作用是要获取某个地址的余额，地址为key，根据key获取的结果为uint256
     mapping(address => uint256) public override balanceOf;
 
+    //mapping的key只能是基础类型，value的类型可以是允许的类型，所以这里的value可以是另外一个mapping
+    //这个mapping的意思就是一个allowance[address]取出来的结果还是个mapping
+    //mapping a=allowance[address]; unit256 res=s[addressB];
     mapping(address => mapping(address => uint256)) public override allowance;
 
     string public name;
