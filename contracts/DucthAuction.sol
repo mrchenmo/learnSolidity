@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 <0.9.0;
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "https://github.com/AmazingAng/WTFSolidity/blob/main/34_ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract DucthAution is Ownable, ERC721 {
     uint256 public constant MAX_SUP = 100000;
@@ -27,7 +27,7 @@ contract DucthAution is Ownable, ERC721 {
         startActionTime = block.timestamp;
     }
 
-    function autionStartMint() {
+    function autionStartMint(uint256 quantity) external payable {
         //使用local变量，减少gas使用,下面的判断都要使用到开始时间，如果从全局变量里面读取会浪费gas，转换成local变量，达成节省gas的作用
         uint256 _startAutionTime = uint256(startActionTime);
         require(
@@ -37,7 +37,7 @@ contract DucthAution is Ownable, ERC721 {
         require(totalSupply() + quantity <= MAX_SUP, "error------ overflow");
         //Azuki的合约限制了单个地址能mint的最大数量
         uint256 totalCoast = getAutionFee(_startAutionTime) * quantity; //获取当前的拍卖价格乘以数量得到总的花费
-        require(msg.value >= totalCost, "Need to send more ETH."); // 检查用户是否支付足够ETH
+        require(msg.value >= totalCoast, "Need to send more ETH."); // 检查用户是否支付足够ETH
 
         for (uint256 i = 0; i < quantity; i++) {
             uint256 mintIndex = totalSupply();
@@ -45,8 +45,8 @@ contract DucthAution is Ownable, ERC721 {
             _addTokenToAllTokensEnumeration(mintIndex);
         }
         // 多余ETH退款
-        if (msg.value > totalCost) {
-            payable(msg.sender).transfer(msg.value - totalCost); //注意一下这里是否有重入的风险
+        if (msg.value > totalCoast) {
+            payable(msg.sender).transfer(msg.value - totalCoast); //注意一下这里是否有重入的风险
         }
     }
 
@@ -83,5 +83,23 @@ contract DucthAution is Ownable, ERC721 {
     function withdrawMoney() external onlyOwner {
         (bool success, ) = msg.sender.call{value: address(this).balance}("");
         require(success, "Transfer failed.");
+    }
+
+    function totalSupply() public view virtual returns (uint256) {
+        return _allTokens.length;
+    }
+
+    // BaseURI
+    function _baseURI() internal view virtual override returns (string memory) {
+        return _baseTokenURI;
+    }
+
+    // BaseURI setter函数, onlyOwner
+    function setBaseURI(string calldata baseURI) external onlyOwner {
+        _baseTokenURI = baseURI;
+    }
+
+    function _addTokenToAllTokensEnumeration(uint256 tokenId) private {
+        _allTokens.push(tokenId);
     }
 }
