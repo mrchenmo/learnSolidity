@@ -11,9 +11,9 @@ contract DucthAution is Ownable, ERC721 {
     //开始结束的价格
     uint256 public constant AUCTION_END_PRICE = 0.015 ether;
     //拍卖持续时间
-    uint256 public constant AUCTION_PRICE_CURVE_LENGTH = 340 minutes;
+    uint256 public constant AUCTION_PRICE_CURVE_LENGTH = 34 minutes;
     //每隔多长时间价格下降一次
-    uint256 public constant AUCTION_DROP_INTERVAL = 20 minutes;
+    uint256 public constant AUCTION_DROP_INTERVAL = 2 minutes;
     //每个时间间隔降价多少，每20分钟降价一次，降了17次=340分钟结束拍卖，价格降到0.15E
     uint256 public constant AUCTION_DROP_PER_STEP =
         (AUCTION_START_PRICE - AUCTION_END_PRICE) /
