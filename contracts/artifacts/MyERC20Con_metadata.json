@@ -314,11 +314,11 @@
 			]
 		},
 		"contracts/myerc.sol": {
-			"keccak256": "0xa905b146e907faed88dbd3a688688b513381917273a4faf8a506b8063be43be0",
+			"keccak256": "0x3cd61c277c18315c581a9ae91cb251fb82f53a11d1c2d317be261e6565bd61d6",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://5acec2309c1848706765e8d775868509611221e71c284922ff63571bf7dc9aed",
-				"dweb:/ipfs/Qma1FCGcWR43tg3TK4Gg1ZrSu2e74LN8jx5o9yCCC7aENT"
+				"bzz-raw://41a605d7f208683e255862f1bbd9d298c987c2d7b8b847b11ec2b77705bc5117",
+				"dweb:/ipfs/QmayFtp2fEguDkVhjcaXHAUBToRW9BM6VdJcwEzHcCuqj2"
 			]
 		}
 	},

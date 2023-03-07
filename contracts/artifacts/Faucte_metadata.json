@@ -1,0 +1,91 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "SendToken",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "requestToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/faucte.sol": "Faucte"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IERC20.sol": {
+			"keccak256": "0x0d3ff2c9021ae4bdb7e7b72c25841cd0ff42827509e3785eebe874fd7d03f99a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7c28c3b8accead50bebed2cbd586c36c7febbca51dad31c2a560d510419b8593",
+				"dweb:/ipfs/QmbdJD5RNE7HxPyg8S4PN6pAXktjXCrtLE6PZXDfig1xMZ"
+			]
+		},
+		"contracts/faucte.sol": {
+			"keccak256": "0x1daf664f98ba20741da31cdc289596024f3a4c5ccb018eaceaeb84581cd31b0c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e4b3b02d7cdfdf2f2d4a9cb6f97dba079864aacec4f8171374cbf00d02da409c",
+				"dweb:/ipfs/QmfMrBDqx8y13DyqsokJhr4SQja58Vk2fNVWG12Nbj46sR"
+			]
+		}
+	},
+	"version": 1
+}
