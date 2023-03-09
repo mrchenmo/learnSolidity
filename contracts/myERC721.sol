@@ -14,7 +14,7 @@ contract MyErc721Nft is ERC721 {
     }
 
     function safeMint(address to, uint256 tokenId) external {
-        require(tokenId > 0 && tokenId < MAX_SUP, "error---------eeeeee");
+        require(tokenId >= 0 && tokenId < MAX_SUP, "error---------eeeeee");
         _safeMint(to, tokenId);
     }
 }

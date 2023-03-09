@@ -61,7 +61,11 @@ contract NFTSwap is IERC721Receiver {
 
     //需要该NFT的持有人授权将此NFT转移到合约地址，由NFTSwap合约控制，就像opensea一样
     //还需要检查frome和to都不能是0地址
-    function listNft(address nftaddr, uint256 tokenId, uint256 price) public {
+    function listNft(
+        address nftaddr,
+        uint256 tokenId,
+        uint256 price
+    ) public {
         IERC721 _nft = IERC721(nftaddr);
         //检查owner持有的此NFT是否批准权限给swap合约地址
         require(
@@ -85,7 +89,7 @@ contract NFTSwap is IERC721Receiver {
         require(order.price > 0, "error----need >0");
         require(msg.value > order.price, "amount need > price"); //购买者的钱包余额需要>出价
         //开始互转，合约将NFT转给买家，将ETH转给卖家
-        IERC721 _nft = IERC721(nftaddr);
+        IERC721 _nft = IERC721(_nftAddr);
         require(
             _nft.ownerOf(_tokenId) == address(this),
             "error---Invalid Order"
@@ -94,7 +98,7 @@ contract NFTSwap is IERC721Receiver {
         _nft.safeTransferFrom(address(this), msg.sender, _tokenId);
 
         //收款，owner地址收款
-        payable(_order.owner).transfer(order.price);
+        payable(order.owner).transfer(order.price);
         //多余的退款
         payable(msg.sender).transfer(msg.value - order.price);
 
@@ -111,7 +115,7 @@ contract NFTSwap is IERC721Receiver {
         //开始取消，也就是将合约控制的该NFT转回到owner的地址
         IERC721 _revokeNFT = IERC721(_nftAddr);
         require(
-            _revokeNFT.ownerOf(_tokenId) == address(this),
+            _revokeNFT.ownerOf(_removeId) == address(this),
             "error---swap not own this nft"
         );
 

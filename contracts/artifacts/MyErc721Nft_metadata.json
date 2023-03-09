@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.17+commit.8df45f5f"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
@@ -384,6 +384,17 @@
 			}
 		],
 		"devdoc": {
+			"events": {
+				"Approval(address,address,uint256)": {
+					"details": "Emitted when `owner` enables `approved` to manage the `tokenId` token."
+				},
+				"ApprovalForAll(address,address,bool)": {
+					"details": "Emitted when `owner` enables or disables (`approved`) `operator` to manage all of its assets."
+				},
+				"Transfer(address,address,uint256)": {
+					"details": "Emitted when `tokenId` token is transferred from `from` to `to`."
+				}
+			},
 			"kind": "dev",
 			"methods": {
 				"approve(address,uint256)": {
@@ -438,7 +449,7 @@
 		"compilationTarget": {
 			"contracts/myERC721.sol": "MyErc721Nft"
 		},
-		"evmVersion": "london",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -531,11 +542,11 @@
 			]
 		},
 		"contracts/myERC721.sol": {
-			"keccak256": "0x731851ba33b31a770d4a66f67fc42e11d6f1ed1f954f3b34ceb031c9ba5d95d8",
+			"keccak256": "0x5865ee2edd59b075dbe8d5bdaf1298770729a636f24b240f16946d3c82849ff6",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://a30e344e0843efa9aba7a0830128082f2c581ea4c0cf798ccbfa8d3a538f931d",
-				"dweb:/ipfs/QmSJTntY2G2zKwxnUGGqqaRv8N1nmmY94HfuYbovBJYj54"
+				"bzz-raw://0a76c6f0707040aa51a3da828a0138163918f5e2f5bb99f51f1fe5cbd3f5ab4e",
+				"dweb:/ipfs/QmQ3PkVLmmootyJgdKJshZdNLekcUph1tfUhPJmvD9TABZ"
 			]
 		}
 	},
