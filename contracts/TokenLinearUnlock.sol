@@ -34,10 +34,11 @@ contract TokenLinerUnlock {
     }
 
     //查询某个地址中某个ERC20的数量，需要使用ERC20或者IERC20将代币地址包装成可以使用的ERC20类
-    function needUnlockNum(
-        address token,
-        uint256 time
-    ) public view returns (uint256) {
+    function needUnlockNum(address token, uint256 time)
+        public
+        view
+        returns (uint256)
+    {
         //计算合约中代币的余额+已归属的代币数量
         uint256 allTokenInCon = IERC20(token).balanceOf(address(this)) +
             erc20Released[token];
