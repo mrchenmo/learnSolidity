@@ -5,6 +5,7 @@ pragma solidity >=0.7.0 <0.9.0;
 //由openzeplin的代理合约简化的代理合约
 contract Proxy {
     address public implementation; //存储逻辑合约的地址，当部署了新的逻辑合约时可以使用set方法存储新的逻辑合约地址;
+    uint256 public xx = 99;
 
     constructor(address _imple) {
         implementation = _imple;
