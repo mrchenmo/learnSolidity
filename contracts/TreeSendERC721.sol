@@ -87,9 +87,9 @@ contract TreeSendERC721 is ERC721 {
 
     function _verify(bytes32 leafHash, bytes32[] memory proof)
         internal
-        view
+        pure
         returns (bool)
     {
-        return MerkleProof.verify(proof, root, leafHash);
+        return MerkleProof.verify(proof, root, leaf);
     }
 }

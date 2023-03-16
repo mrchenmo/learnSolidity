@@ -10,7 +10,7 @@ contract Proxy {
         implementation = _imple;
     }
 
-    function _delegate(address implementation) internal virtual {
+    function _delegate(address implementation_) internal {
         assembly {
             // Copy msg.data. We take full control of memory in this inline assembly
             // block because it will not return to Solidity code. We overwrite the
@@ -21,7 +21,7 @@ contract Proxy {
             // out and outsize are 0 because we don't know the size yet.
             let result := delegatecall(
                 gas(),
-                implementation,
+                implementation_,
                 0,
                 calldatasize(),
                 0,
@@ -46,5 +46,7 @@ contract Proxy {
         _delegate(implementation);
     }
 
-    
+    receive() external payable {
+        _delegate(implementation);
+    }
 }
