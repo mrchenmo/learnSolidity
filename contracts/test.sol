@@ -4,6 +4,7 @@ pragma solidity >=0.7.0 <0.9.0;
 
 contract Test {
     uint256 x = 123;
+    uint256 public numX = 1;
     address addr = 0x7A58c0Be72BE218B41C608b7Fe7C5bB630736C71;
     string name = "cwpp";
     uint256[2] array = [6, 9];
@@ -86,5 +87,15 @@ contract Test {
             )
         );
         return (success, data);
+    }
+
+    modifier whereCode() {
+        numX += 2;
+        _;
+        numX -= 1;
+    }
+
+    function verifyTh() public whereCode {
+        numX += 1;
     }
 }
