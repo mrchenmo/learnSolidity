@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.7+commit.e28d00a7"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
@@ -83,7 +83,7 @@
 		"compilationTarget": {
 			"contracts/feidian.sol": "Feidian"
 		},
-		"evmVersion": "london",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -96,11 +96,11 @@
 	},
 	"sources": {
 		"contracts/feidian.sol": {
-			"keccak256": "0x3438f1983e53dbd7feeaa48b45229e9424e3cea2c36fb9d06268406bd815c53f",
+			"keccak256": "0xe60c70611f8916496bd6e66efdbfe00d7839e067fd5610c0e327d1687a620c53",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://c4ff9efa9b04304ccba6fdab910597513793d67fbbc0b1515497ff2531586d07",
-				"dweb:/ipfs/QmWhQLT8XWLwfew2sYVTJFGfXqjNs1nKwCUU8Zn3J8N9gv"
+				"bzz-raw://9d345331bd017490652cdcbdb8f414ff8c530afc76793606edc8a6bae3873a1f",
+				"dweb:/ipfs/QmNwhW3cVFyNxHWjmXdQUC8mrAJCPx1dd5d2FUoS5SupP7"
 			]
 		}
 	},

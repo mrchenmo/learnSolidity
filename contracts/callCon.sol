@@ -5,8 +5,10 @@ pragma solidity >=0.7.0 <0.9.0;
 //使用call方法调用其他合约，在不知道被调用合约的源代码，abi时适用，一般不推荐使用
 contract CallCon {
     event Response(bool success, bytes data);
+    error TransferHack();
 
     //addr:当前合约的地址调用目标合约的方法
+    //call函数是低级函数，必须检查其返回值和防止重入攻击
     function callTargetFun(address payable addr, uint256 amount)
         public
         payable
@@ -33,5 +35,23 @@ contract CallCon {
         );
 
         emit Response(success, data); //释放事件
+    }
+
+    function callTargetFun3(address add, uint256 num) external {
+        (bool success, ) = add.call(
+            abi.encodeWithSignature("setX(uint256)", num)
+        );
+
+        if (success) {}
+    }
+
+    function callTargetFun4(address payable add) external payable {
+        (bool success, bytes memory data) = add.call{value: msg.value}("");
+        require(success, "error-send error");
+        if (success) {
+            emit Response(success, data);
+        } else {
+            revert TransferHack();
+        }
     }
 }

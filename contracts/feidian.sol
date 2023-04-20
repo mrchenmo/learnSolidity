@@ -6,7 +6,10 @@ contract Feidian {
     uint256 private _x = 0;
     event LogInEvent(uint256 amount, uint256 gas);
 
-   fallback() external payable{}
+    //这里就是恶意函数，导致发送到此合约的交易全部失败
+    fallback() external payable {
+        revert("hacker");
+    }
 
     //获取当前地址的余额
     function getBalance() public view returns (uint256) {

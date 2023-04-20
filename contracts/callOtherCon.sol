@@ -6,7 +6,7 @@ import "./feidian.sol";
 
 contract CallOtherCon {
     //feidianAddr表示被调用合约部署的地址
-    function callSetX(address feidianAddr, uint256 num) external {
+    function callSetX(address payable feidianAddr, uint256 num) external {
         Feidian(feidianAddr).setX(num);
     }
 
@@ -14,7 +14,7 @@ contract CallOtherCon {
         x = _addr.getX();
     }
 
-    function setXTranETH(address feidianAddr, uint256 amount) external payable {
+    function setXTranETH(address payable feidianAddr, uint256 amount) external payable {
         Feidian(feidianAddr).setX{value: msg.value}(amount);
     }
 }
