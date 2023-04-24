@@ -6,33 +6,15 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "payable",
-				"type": "constructor"
-			},
-			{
-				"inputs": [],
-				"name": "owner",
-				"outputs": [
+				"inputs": [
 					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address payable",
-						"name": "_to",
-						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "",
 						"type": "uint256"
 					}
 				],
@@ -55,7 +37,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/txOrigin.sol": "TXOrigin"
+			"contracts/CallOtherCon.sol": "TXOrigin"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -69,12 +51,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/txOrigin.sol": {
-			"keccak256": "0x2f9d46704e1f243dea159746bd8b37696c775a8216b13fd9d5cdc311096b125c",
+		"contracts/CallOtherCon.sol": {
+			"keccak256": "0xe610fa8518f2153f4af6987bb0188a3fb04c614c67959a7614937994a6ce6134",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://bcf8a5213a9d54b910ac8c88ddb301c64fb24a559c756f26bec16b87538d3b7c",
-				"dweb:/ipfs/QmW6bTyXXFbchi8Lv1sg9muzgMLNmxf4v42aNQrszguKKm"
+				"bzz-raw://81f1c809d333f62cc3fd281ed07111f035ff3febe84497da5bdfe42062197357",
+				"dweb:/ipfs/QmZUH5ohUWkXHAcuApyh5JkDkYLurVq5g9K2AStJLRRKtD"
 			]
 		}
 	},

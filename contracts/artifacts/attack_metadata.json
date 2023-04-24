@@ -17,8 +17,45 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "ExecutionResult",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "h",
+						"type": "string"
+					}
+				],
+				"name": "HackSuccess",
+				"type": "event"
+			},
+			{
 				"inputs": [],
 				"name": "hack",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "bankAdd",
+						"type": "address"
+					}
+				],
+				"name": "hack2",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -65,11 +102,11 @@
 	},
 	"sources": {
 		"contracts/txOrigin.sol": {
-			"keccak256": "0x2f9d46704e1f243dea159746bd8b37696c775a8216b13fd9d5cdc311096b125c",
+			"keccak256": "0xd8017be1be4a8979dfba2e76c82498d7245ddb30fffd2a970989522b0f2d76b0",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://bcf8a5213a9d54b910ac8c88ddb301c64fb24a559c756f26bec16b87538d3b7c",
-				"dweb:/ipfs/QmW6bTyXXFbchi8Lv1sg9muzgMLNmxf4v42aNQrszguKKm"
+				"bzz-raw://3aba704b3fa71c4d6824dd827bb5335a6e3e40163dbf300e44fcf62a9a76ef8d",
+				"dweb:/ipfs/QmfGKgWRsyoreSuKBWamNT5s2JE6eSVoqxuq1ChpQGvJq3"
 			]
 		}
 	},
